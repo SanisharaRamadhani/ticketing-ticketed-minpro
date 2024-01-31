@@ -1,7 +1,12 @@
-import Image from 'next/image';
-import Link from 'next/link';
+
 import { FaListUl } from 'react-icons/fa';
 
+
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
 const ListEvent = () => {
   return (
@@ -53,7 +58,9 @@ const ListEvent = () => {
             <p className="text-start my-2">Create Event</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 mt-[50px] px-2 bg-slate-300 py-5">
+
+        <div className="grid grid-cols-2 mt-[50px] px-2 bg-slate-500 py-5 ">
+
           <div className="mx-5">
             <p>Event</p>
           </div>
@@ -63,6 +70,7 @@ const ListEvent = () => {
             <p>Status</p>
           </div>
         </div>
+
         {/* cards */}
         <div className="flex justify-center items-center gap-5 pt-10">
           {/* cards 1*/}
@@ -166,6 +174,7 @@ const ListEvent = () => {
                 </div>
               </p>
             </div>
+
           </div>
         </div>
       </div>
