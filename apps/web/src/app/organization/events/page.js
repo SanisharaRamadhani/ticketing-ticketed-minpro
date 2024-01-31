@@ -8,13 +8,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavbarOrg from '@/components/NavbarOrg';
 import NavbarSide from '@/components/NavbarSide';
+import ListEvent2 from '@/components/ListEvent2';
 
 const Home = () => {
   return (
     <>
       <div>
         <NavbarOrg />
-        <ListEvent />
+        <ListEvent2 />
         <Footer />
       </div>
     </>
