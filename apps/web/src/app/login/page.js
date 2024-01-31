@@ -2,7 +2,7 @@ import Login from '@/components/login';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
-import ListEvent from '@/components/ListEvent';
+import ListEvent from '@/components/ListEvent2';
 import Navbar from '@/components/Navbar';
 import SignUp from '@/components/SignUp';
 import ForgotPass from '@/components/ForgotPass';

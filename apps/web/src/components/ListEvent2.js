@@ -4,7 +4,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-const ListEvent = () => {
+const ListEvent2 = () => {
   return (
     <>
       {/* dashboard organizer */}
@@ -98,4 +98,4 @@ const ListEvent = () => {
     </>
   );
 };
-export default ListEvent;
+export default ListEvent2;
