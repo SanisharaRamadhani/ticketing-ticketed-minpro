@@ -21,6 +21,7 @@ export const verifyToken = async (
       return res.status(400).send('Token not found');
     }
 
+
     // const checkToken = await redisClient.get(`forgot:${req.body.email}`);
     // console.log(token, checkToken);
 
@@ -32,6 +33,7 @@ export const verifyToken = async (
     // } else {
     //   return res.status(401).send('Token is not valid');
     // }
+
   } catch (error) {
     return res.status(400).send('Token error');
   }

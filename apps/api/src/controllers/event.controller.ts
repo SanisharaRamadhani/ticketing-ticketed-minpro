@@ -6,7 +6,11 @@ export class CreateEventsController {
     try {
       console.log(req.body);
 
-      // return res.status(201).send({ success: true, data: "new" });
+
+      // if(!req.file?.filename) return//
+
+
+   return res.status(201).send({ success: true, data: "new" });
       const newEvent = await prisma.event.create({
         data: {
           tittle: req.body.tittle,
@@ -28,4 +32,14 @@ export class CreateEventsController {
       next(error);
     }
   }
+
+  async getEvents(req: Request, res: Response, next: NextFunction) {
+    try {
+      const getEvents = await prisma.event.findMany();
+      return res.status(200).send({ getEvents });
+    } catch (error) {
+      next(error);
+    }
+  }
+
 }

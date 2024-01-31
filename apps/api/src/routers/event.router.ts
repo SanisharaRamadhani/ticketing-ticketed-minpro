@@ -1,6 +1,9 @@
 import { CreateEventsController } from '@/controllers/event.controller';
 import { Router } from 'express';
 
+import { uploader } from '@/middleware/uploader';
+
+
 export class CreateEventsRouter {
   private router: Router;
   private createEvents: CreateEventsController;
@@ -12,7 +15,14 @@ export class CreateEventsRouter {
   }
 
   private initializeRouter(): void {
-    this.router.post('/create-event', this.createEvents.createEvent);
+
+    this.router.post(
+      '/create-event',
+      uploader('IMG', '/image').single('image'),
+      this.createEvents.createEvent,
+    );
+    this.router.get('/event-card', this.createEvents.getEvents);
+
   }
 
   getRouter(): Router {
