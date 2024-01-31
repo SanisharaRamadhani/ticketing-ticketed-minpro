@@ -7,7 +7,6 @@ import fs from 'fs';
 import handlebars from 'handlebars';
 import path from 'path';
 import { sign } from 'jsonwebtoken';
-import { redisClient } from '../helpers/redis';
 
 export class AuthController {
   async registerUser(req: Request, res: Response, next: NextFunction) {
@@ -52,11 +51,25 @@ export class AuthController {
     }
   }
 
+
+  async login(req: Request, res: Response, next: NextFunction){
+    try {
+      console.log(req.body.email);
+      const checkUser = await prisma.user.findUnique({
+        where: { email: req.body.email },
+    } catch (error) {
+      
+    }
+  };
+
   async forgotPassword(req: Request, res: Response, next: NextFunction) {
     try {
+      console.log(req.body.email);
       const checkUser = await prisma.user.findUnique({
         where: { email: req.body.email },
       });
+      console.log(checkUser);
+
       if (checkUser) {
         const token = sign(
           {
@@ -91,7 +104,7 @@ export class AuthController {
           message: 'Check your email',
         });
       } else {
-  
+
         throw new Error('Account is not exist');
       }
     } catch (error: any) {
@@ -107,6 +120,5 @@ export class AuthController {
     } catch (error) {
       next(error);
     }
-
   }
 }

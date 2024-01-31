@@ -22,7 +22,9 @@ export class AuthRouter {
     );
 
     this.router.post('/forgotpass', this.authController.forgotPassword);
-    this.router.patch('/reset', this.authController.resetPassword);
+
+    this.router.patch('/reset', verifyToken, this.authController.resetPassword);
+
 
   }
 

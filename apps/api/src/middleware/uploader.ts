@@ -1,3 +1,4 @@
+
 import {Request} from 'express'
 import multer from 'multer'
 import {join} from 'path'
@@ -31,4 +32,4 @@ export const uploader = (filePrefix: string, folderName?: string) => { //filePre
 
     return multer({storage: configStorage})
 
-}
+};

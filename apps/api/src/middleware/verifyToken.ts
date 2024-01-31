@@ -21,17 +21,19 @@ export const verifyToken = async (
       return res.status(400).send('Token not found');
     }
 
-    const checkToken = await redisClient.get(`forgot:${req.body.email}`);
-    console.log(token, checkToken);
 
-    if (token === checkToken) {
-      const verifiedToken = verify(token, 'secretJWT');
+    // const checkToken = await redisClient.get(`forgot:${req.body.email}`);
+    // console.log(token, checkToken);
 
-      req.dataUser = verifiedToken;
-      next();
-    } else {
-      return res.status(401).send('Token is not valid');
-    }
+    //if (token === checkToken) {
+    const verifiedToken = verify(token, 'secretJWT');
+
+    req.dataUser = verifiedToken;
+    next();
+    // } else {
+    //   return res.status(401).send('Token is not valid');
+    // }
+
   } catch (error) {
     return res.status(400).send('Token error');
   }

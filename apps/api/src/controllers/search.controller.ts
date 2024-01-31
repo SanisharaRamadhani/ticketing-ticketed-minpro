@@ -9,7 +9,9 @@
 //   }
 
 //   async searchevent(req: Request, res: Response) {
-//     const search
+
+//     const search;
+
 //   }
 
 //   async getSampleDataById(req: Request, res: Response) {
