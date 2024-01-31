@@ -1,8 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { BsArrowRightShort } from 'react-icons/bs';
+
 import { RiDashboardFill, Ri4KFill } from 'react-icons/ri';
 import { SiEventstore } from 'react-icons/si';
 import { FaFirstOrderAlt } from 'react-icons/fa';
@@ -12,6 +11,7 @@ import { TbSettingsCog } from 'react-icons/tb';
 
 const NavbarSide = () => {
   const [open, setOpen] = useState(true);
+
   const [header, setHeader] = useState(false);
 
   const scrollHeader = () => {
@@ -51,6 +51,7 @@ const NavbarSide = () => {
               <div></div>
             </button>
           </div>
+
         </div>
       </div>
     </>

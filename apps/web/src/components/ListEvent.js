@@ -1,3 +1,7 @@
+
+import { FaListUl } from 'react-icons/fa';
+
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -54,7 +58,9 @@ const ListEvent = () => {
             <p className="text-start my-2">Create Event</p>
           </div>
         </div>
+
         <div className="grid grid-cols-2 mt-[50px] px-2 bg-slate-500 py-5 ">
+
           <div className="mx-5">
             <p>Event</p>
           </div>
@@ -64,34 +70,111 @@ const ListEvent = () => {
             <p>Status</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 mt-[10px] px- py-10 h-[100px] border-2 border-y-black">
-          <div className="mx-5">
-            <p>event name</p>
+
+        {/* cards */}
+        <div className="flex justify-center items-center gap-5 pt-10">
+          {/* cards 1*/}
+          <Link href="/event" className="cursor-pointer">
+            <div class="cursor-pointers block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+               <image
+                  class="rounded-t-lg"
+                  src="https://www.centralpark.com/downloads/9882/download/summerstage-EmilyGoncalves.jpg?cb=b379bf412bd7ae8db9d7f451df9ef7bb&w=640"
+                  alt=""
+                />
+              </div>
+              <div class="p-6">
+                <p class="text-base text-neutral-600 dark:text-neutral-200">
+                  <div className="p-3">
+                    <div className="text-md font-bold">Blues </div>
+                    <h className="font-light text-sm leading-6 text-gray-700 my-2">
+                      05 February 2023
+                    </h>
+                    <p className="paragraph-normal text-gray-600">ICE, BSD</p>
+                    <p className="paragraph-normal text-gray-600">
+                      Rp. 1.800.000 - 2.800.000
+                    </p>
+                    <Link className="mt-3 block" href="#"></Link>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </Link>
+
+          <div class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+             <image
+                class="rounded-t-lg"
+                src="https://www.centralpark.com/downloads/9882/download/summerstage-EmilyGoncalves.jpg?cb=b379bf412bd7ae8db9d7f451df9ef7bb&w=640"
+                alt=""
+              />
+            </div>
+            <div class="p-6">
+              <p class="text-base text-neutral-600 dark:text-neutral-200">
+                <div className="p-3">
+                  <div className="text-md font-bold">Blues </div>
+                  <h className="font-light text-sm leading-6 text-gray-700 my-2">
+                    05 February 2023
+                  </h>
+                  <p className="paragraph-normal text-gray-600">ICE, BSD</p>
+                  <p className="paragraph-normal text-gray-600">
+                    Rp. 1.800.000 - 2.800.000
+                  </p>
+                  <Link className="mt-3 block" href="#"></Link>
+                </div>
+              </p>
+            </div>
           </div>
-          <div className="grid grid-cols-4">
-            <p>-</p>
-            <p>-</p>
-            <p>-</p>
+
+          <div class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+             <image
+                class="rounded-t-lg"
+                src="https://www.centralpark.com/downloads/9882/download/summerstage-EmilyGoncalves.jpg?cb=b379bf412bd7ae8db9d7f451df9ef7bb&w=640"
+                alt=""
+              />
+            </div>
+            <div class="p-6">
+              <p class="text-base text-neutral-600 dark:text-neutral-200">
+                <div className="p-3">
+                  <div className="text-md font-bold">Blues </div>
+                  <h className="font-light text-sm leading-6 text-gray-700 my-2">
+                    05 February 2023
+                  </h>
+                  <p className="paragraph-normal text-gray-600">ICE, BSD</p>
+                  <p className="paragraph-normal text-gray-600">
+                    Rp. 1.800.000 - 2.800.000
+                  </p>
+                  <Link className="mt-3 block" href="#"></Link>
+                </div>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="grid grid-cols-2 mt-[10px] px- py-10 h-[100px] border-2 border-y-black">
-          <div className="mx-5">
-            <p>event name</p>
-          </div>
-          <div className="grid grid-cols-4">
-            <p>-</p>
-            <p>-</p>
-            <p>-</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-2 my-[10px] px- py-10 h-[100px] border-2 border-y-black">
-          <div className="mx-5">
-            <p>event name</p>
-          </div>
-          <div className="grid grid-cols-4">
-            <p>-</p>
-            <p>-</p>
-            <p>-</p>
+
+          <div class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+             <image
+                class="rounded-t-lg"
+                src="https://www.centralpark.com/downloads/9882/download/summerstage-EmilyGoncalves.jpg?cb=b379bf412bd7ae8db9d7f451df9ef7bb&w=640"
+                alt=""
+              />
+            </div>
+            <div class="p-6">
+              <p class="text-base text-neutral-600 dark:text-neutral-200">
+                <div className="p-3">
+                  <div className="text-md font-bold">Blues </div>
+                  <h className="font-light text-sm leading-6 text-gray-700 my-2">
+                    05 February 2023
+                  </h>
+                  <p className="paragraph-normal text-gray-600">ICE, BSD</p>
+                  <p className="paragraph-normal text-gray-600">
+                    Rp. 1.800.000 - 2.800.000
+                  </p>
+                  <Link className="mt-3 block" href="#"></Link>
+                </div>
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
